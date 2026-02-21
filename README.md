@@ -34,6 +34,7 @@
 Ознакомьтесь со всеми пунктами из этой секции, не беритесь сразу выполнять задание, не дочитав до конца. Пункты взаимосвязаны и могут влиять друг на друга.
  ## запускаем terraform
  <img width="912" height="371" alt="image" src="https://github.com/user-attachments/assets/da2d036b-c241-47fc-877b-92ab6a1b69b5" />
+ 
 ## terraform plan (итог команды)
 <img width="1919" height="988" alt="image" src="https://github.com/user-attachments/assets/b463805b-f89a-452c-a8e4-6a66ac3f6b25" />
 ##  terraform apply (итог команды)
