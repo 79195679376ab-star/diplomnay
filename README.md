@@ -36,7 +36,7 @@
  <img width="912" height="371" alt="image" src="https://github.com/user-attachments/assets/da2d036b-c241-47fc-877b-92ab6a1b69b5" />
 ## terraform plan (итог команды)
 <img width="1919" height="988" alt="image" src="https://github.com/user-attachments/assets/b463805b-f89a-452c-a8e4-6a66ac3f6b25" />
-## terraform apply (итог команды)
+##  terraform apply (итог команды)
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1cc31ba5-2a9a-4360-a708-c719db100fa5" />
 
 
