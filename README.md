@@ -40,7 +40,10 @@
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1cc31ba5-2a9a-4360-a708-c719db100fa5" />
 
 
-## Проверяем доступность созданных ВМ с помощью ansible all -m ping
+## Проверяем доступность созданных ВМ с помощью ansible all -m ping (Видим,что машины доступны)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9289a733-b56f-418d-99c2-0b17de6dbb73" />
+
 ### Сайт
 Создайте две ВМ в разных зонах, установите на них сервер nginx, если его там нет. ОС и содержимое ВМ должно быть идентичным, это будут наши веб-сервера.
 
