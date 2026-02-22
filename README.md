@@ -36,71 +36,9 @@
 ### Вывод терраформ
 <img width="1920" height="944" alt="image" src="https://github.com/user-attachments/assets/cbc3d358-a7db-4d2f-96a2-805e5767ef35" />
 
-###  Сгенерирован inventory‑файл с публичными IP‑адресами (inventory-ip.ini):
+### ПРоверяем пинг 
+<img width="1920" height="749" alt="image" src="https://github.com/user-attachments/assets/be0201d4-b4ae-4653-9e2a-5cd9e79a8e61" />
 
-
-[servers]
-93.77.184.221
-93.77.191.94
-93.77.187.178
-
-[servers:vars]
-ansible_user=ubuntu
-ansible_ssh_private_key_file=~/.ssh/id_rsa
-
-### Создан основной playbook (playbook.yml) для установки nginx и настройки веб‑страницы:
-
-
----
-- name: Configure VMs with nginx
-  hosts: servers
-  become: yes
-
-  tasks:
-    - name: Update package cache
-      apt:
-        update_cache: yes
-        cache_valid_time: 3600
-
-    - name: Install nginx
-      apt:
-        name: nginx
-        state: present
-
-    - name: Ensure nginx is running and enabled
-      service:
-        name: nginx
-        state: started
-        enabled: yes
-
-    - name: Create index.html
-      copy:
-        content: |
-          <html>
-          <head><title>Diploma Project</title></head>
-          <body><h1>VM {{ inventory_hostname }} is working!</h1></body>
-          </html>
-        dest: /var/www/html/index.html
-
-    - name: Restart nginx to apply changes
-      service:
-        name: nginx
-        state: restarted
-
-### Проверка SSH‑подключения
-
-Перед запуском playbook выполнена очистка записей в known_hosts для всех IP‑адресов ВМ:
-
-
-ssh-keygen -R 93.77.184.221
-ssh-keygen -R 93.77.191.94
-ssh-keygen -R 93.77.187.178
-Затем выполнено ручное подтверждение SSH‑ключей для каждой ВМ:
-
-
-ssh ubuntu@93.77.184.221  # введено yes при запросе
-ssh ubuntu@93.77.191.94   # введено yes при запросе
-ssh ubuntu@93.77.187.178  # введено yes при запросе
 
 ### функционирование nginx на каждой ВМ:
 <img width="1920" height="999" alt="image" src="https://github.com/user-attachments/assets/33c35d55-4103-4571-ae0e-a64476e0c84e" />
