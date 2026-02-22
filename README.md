@@ -65,7 +65,12 @@
 
 Протестируйте сайт
 `curl -v <публичный IP балансера>:80` 
+### Итог плейбука 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/87d060fd-fc65-411a-a64c-93a6c42c47e2" />
 
+### непосредственно сам сайт 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7ce8697c-6958-4052-b7ad-b79bd24e616f" />
+ 
 ### Мониторинг
 Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
 
