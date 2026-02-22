@@ -34,10 +34,12 @@
 Ознакомьтесь со всеми пунктами из этой секции, не беритесь сразу выполнять задание, не дочитав до конца. Пункты взаимосвязаны и могут влиять друг на друга.
 
 ### Вывод терраформ
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd728ed4-1582-4ef4-bf80-f80517664478" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d91944f7-dea4-403f-936f-dac22986a5a1" />
+
 
 ### ПРоверяем пинг 
-<img width="1920" height="749" alt="image" src="https://github.com/user-attachments/assets/be0201d4-b4ae-4653-9e2a-5cd9e79a8e61" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d15ce625-9064-439a-b4e5-faa986affcbc" />
+
 
 
 ### функционирование nginx на каждой ВМ:
