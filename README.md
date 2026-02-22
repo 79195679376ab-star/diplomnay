@@ -43,7 +43,8 @@
 
 
 ### функционирование nginx на каждой ВМ:
-<img width="1920" height="999" alt="image" src="https://github.com/user-attachments/assets/33c35d55-4103-4571-ae0e-a64476e0c84e" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2f5f58d1-c8f9-41dd-8ed5-83c8ecf50dbb" />
+
 
 ### Сайт
 Создайте две ВМ в разных зонах, установите на них сервер nginx, если его там нет. ОС и содержимое ВМ должно быть идентичным, это будут наши веб-сервера.
