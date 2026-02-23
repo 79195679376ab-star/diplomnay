@@ -76,6 +76,9 @@
 Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
 
 Настройте дешборды с отображением метрик, минимальный набор — по принципу USE (Utilization, Saturation, Errors) для CPU, RAM, диски, сеть, http запросов к веб-серверам. Добавьте необходимые tresholds на соответствующие графики.
+### Запускаем плейбук - monitoring-playbook.yml Проверяем, что плейбук завершился без ошибок
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b68b6394-1476-40ab-bf01-73755b0010f4" />
+
 
 ### Логи
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
