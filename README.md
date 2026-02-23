@@ -95,9 +95,14 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 Настройте ВМ с публичным адресом, в которой будет открыт только один порт — ssh.  Эта вм будет реализовывать концепцию  [bastion host]( https://cloud.yandex.ru/docs/tutorials/routing/bastion) . Синоним "bastion host" - "Jump host". Подключение  ansible к серверам web и Elasticsearch через данный bastion host можно сделать с помощью  [ProxyCommand](https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html#network-delegate-to-vs-proxycommand) . Допускается установка и запуск ansible непосредственно на bastion host.(Этот вариант легче в настройке)
 
 Исходящий доступ в интернет для ВМ внутреннего контура через [NAT-шлюз](https://yandex.cloud/ru/docs/vpc/operations/create-nat-gateway).
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ae5f066b-a543-4b3b-bf75-6a482a16a03e" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d03fa648-52a6-4f45-a74f-914cdf6009e2" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1b7257f6-3cb7-4778-8807-87b973076e3e" />
 
 ### Резервное копирование
 Создайте snapshot дисков всех ВМ. Ограничьте время жизни snaphot в неделю. Сами snaphot настройте на ежедневное копирование.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d699c302-6800-4715-8f91-7a8939987e48" />
 
 ### Дополнительно
 Не входит в минимальные требования. 
