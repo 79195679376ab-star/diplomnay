@@ -78,6 +78,8 @@
 Настройте дешборды с отображением метрик, минимальный набор — по принципу USE (Utilization, Saturation, Errors) для CPU, RAM, диски, сеть, http запросов к веб-серверам. Добавьте необходимые tresholds на соответствующие графики.
 ### Запускаем плейбук - monitoring-playbook.yml Проверяем, что плейбук завершился без ошибок
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b68b6394-1476-40ab-bf01-73755b0010f4" />
+###   Дашборд 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9eca8634-02f3-4a5c-9ee5-72221d40f6c7" />
 
 
 ### Логи
