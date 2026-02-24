@@ -1,0 +1,12 @@
+#cloud-config
+users:
+  - name: alex
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCmJKrxbVUjZT1Mf9pxtJtkGjYB/x23rAhjw+s0HzvLHNlGR1PhNtmGrzfh+wtHHz03jDelhwjWU2Y0aJF4U7pmMjlBD5bDBZDP8HUiWm1u1907llHYEp25upUd99W1dP2eOP91NO0cBXYx1Ww1l7EEpULSPVuaA585cuRzpUIc+R2Oi6AlZ6wIV/gssxtz08vxSdkBlcX3U0y971kD8TAPKQKXS7zOdwtpsj8rMlu8/SFHQJMd3O3FtG2c4A1va8UeYZROwFOdgqEhHuCXTiK43tvYnG4el8u9Di0j0EXNWpOeCDG2KqGkZ9SVxFp/4cxEEQN4TpQnL30nunWjvhfU5u6eP1cA4byDVXF94bB9KKSBLa35O0Jw8HHARHecsCPdKT3bQISMSHwpeEDGZeQH40ca8NWTwFVyBClixg6rRt1ztlhM/sL/8We2UJbmTEA+zFVDZLApCuSDfQwuzjD+/6y/9oB8qVzVGRQzV54pQ8F3GFwo4wKr7ZxaPu6vsKeApf99kS8GDpxbPvsAcQsmpx6NI0DUOjQWJAiaO6k52HhRMIwyOFKc01/yEFeZ2qdZf1fLATvpcpj2ADoDpgrIa0h2Nf/sRhV/bNX5SAQo1uKjNWPCKue9izP3K+bwhPnrxURnPolFaqpI8Fk2DHaCP3GRmM2XMfwRIvhfM28oyw== alex@astra
+
+
+
+
