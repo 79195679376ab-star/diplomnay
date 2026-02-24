@@ -1,0 +1,52 @@
+- name: Create dir for data
+  file:
+    path: /etc/elasticsearch/data
+    state: directory
+    owner: 1000
+    group: 1000
+    mode: 0775
+
+- name: Pull Elasticsearch image with fallback strategy
+  block:
+    - name: Try pulling official Elasticsearch image (preferred)
+      docker_image:
+        name: elasticsearch:8.11.3
+        source: pull
+      register: pull_result
+      ignore_errors: yes
+
+    - name: Fail if no image was pulled successfully
+      fail:
+        msg: "Failed to pull any Elasticsearch image. Check network connectivity and image availability."
+      when: pull_result is failed
+  rescue:
+    - name: Fallback to latest official image
+      docker_image:
+        name: elasticsearch:latest
+        source: pull
+
+- name: Create container
+  docker_container:
+    name: "Elasticsearch"
+    image: "elasticsearch:8.11.3"  # укажите нужную версию
+    user: 1000
+    volumes:
+      - "/etc/elasticsearch/data:/usr/share/elasticsearch/data"  # путь для официального образа
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    env:
+      ELASTICSEARCH_CLUSTER_NAME: netology
+      xpack.security.enrollment.enabled: "true"
+    state: started
+    restart_policy: always
+
+- name: docker container ls -a
+  tags: container_ls
+  shell: "docker container ls -a"
+  register: container_info
+
+- name: docker container ls -a result
+  tags: container_ls
+  debug:
+    msg: "{{ container_info.stdout_lines }}"

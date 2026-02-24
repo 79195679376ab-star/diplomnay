@@ -1,0 +1,68 @@
+- name: Install and configure Docker
+  block:
+    - name: Install reqs for Docker
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - gnupg-agent
+          - software-properties-common
+        state: present
+
+    - name: Add the GPG key for Docker
+      apt_key:
+        url: https://download.docker.com/linux/debian/gpg
+        state: present
+
+    - name: Add the repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/debian buster stable
+        state: present
+
+    - name: Update and install docker
+      apt:
+        update_cache: yes
+        name: docker-ce
+        state: present
+
+    - name: Install the Docker module for Python with compatible dependencies
+      pip:
+        name:
+          - docker
+          - requests==2.31.0
+          - urllib3==1.26.6
+        state: present
+
+    - name: Ensure Docker service is running
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Add ansible user to docker group
+      user:
+        name: "{{ ansible_user | default('root') }}"
+        groups: docker
+        append: yes
+  become: yes
+
+- name: Pull Kibana image
+  docker_image:
+    name: kibana:8.11.3
+    source: pull
+  vars:
+    docker_host: "unix:///var/run/docker.sock"
+
+- name: Create Kibana container
+  docker_container:
+    name: "Kibana"
+    image: "kibana:8.11.3"
+    ports:
+      - "5601:5601"
+    env:
+      ELASTICSEARCH_HOSTS: "http://elasticsearch-host:9200"
+    state: started
+    restart_policy: always
+  vars:
+    docker_host: "unix:///var/run/docker.sock"
